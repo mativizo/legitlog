@@ -1,0 +1,14 @@
+{
+  "name": "@mativizo/legitlog",
+  "version": "1.0.0",
+  "description": "A legit log",
+  "main": "legitlog.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "logs"
+  ],
+  "author": "Mativizo",
+  "license": "MIT"
+}
