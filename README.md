@@ -1,6 +1,8 @@
 # LegitLog
 
-Mini library for logging with emoji 😎 and colors 🟥.
+![npm (scoped)](https://img.shields.io/npm/v/@mativizo/legitlog)
+
+Mini library for logging with emoji 😎 and colors 🟥. Just get some legit fun with coding! 😎
 
 
 ## How to use?
@@ -33,7 +35,7 @@ legit.log()
 
 This code will output:
 
-![LegitLog output in terminal](screenshot.png?raw=true)
+![LegitLog output in terminal](https://raw.githubusercontent.com/mativizo/legitlog/main/screenshot.png)
 
 ### Methods
 
