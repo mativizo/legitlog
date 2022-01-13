@@ -1,6 +1,6 @@
 {
   "name": "@mativizo/legitlog",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A legit log",
   "main": "legitlog.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/monatheoctocat/my_package.git"
+    "url": "https://github.com/mativizo/legitlog.git"
   },
   "keywords": [
     "logs"
