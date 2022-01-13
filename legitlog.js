@@ -1,4 +1,4 @@
-const level = {
+const LEVEL = {
     MESSAGE: "message",
     INFO: 'info',
     NOTICE: 'notice',
@@ -7,11 +7,11 @@ const level = {
 };
 
 const emoji = {}
-emoji[level.MESSAGE] = "📩";
-emoji[level.INFO] = "💡";
-emoji[level.NOTICE] = "📝";
-emoji[level.WARNING] = "🛑";
-emoji[level.ERROR] = "😡";
+emoji[LEVEL.MESSAGE] = "📩";
+emoji[LEVEL.INFO] = "💡";
+emoji[LEVEL.NOTICE] = "📝";
+emoji[LEVEL.WARNING] = "🛑";
+emoji[LEVEL.ERROR] = "😡";
 
 const COLOR = {
     BLACK: "\x1b[30m",
@@ -46,14 +46,14 @@ const BACKGROUND = {
 };
 
 const levelColor = {}
-levelColor[level.MESSAGE] = COLOR.WHITE
-levelColor[level.INFO] = COLOR.GREEN
-levelColor[level.NOTICE] = COLOR.BLUE
-levelColor[level.WARNING] = COLOR.YELLOW
-levelColor[level.ERROR] = COLOR.RED
+levelColor[LEVEL.MESSAGE] = COLOR.WHITE
+levelColor[LEVEL.INFO] = COLOR.GREEN
+levelColor[LEVEL.NOTICE] = COLOR.BLUE
+levelColor[LEVEL.WARNING] = COLOR.YELLOW
+levelColor[LEVEL.ERROR] = COLOR.RED
 
 
-const log = (logMessage = "Legit Log Default Message", logLevel = level.MESSAGE, logTime = true, logDate = false, messageColor = null, messageBackground = null, messageEffect = null, prepend="", append="") => {
+const log = (logMessage = "Legit!", logLevel = LEVEL.MESSAGE, logTime = true, logDate = false, messageColor = null, messageBackground = null, messageEffect = null, prepend="", append="") => {
     let date = new Date();
    
     let day = ("0" + date.getDate()).slice(-2);
@@ -113,7 +113,7 @@ const log = (logMessage = "Legit Log Default Message", logLevel = level.MESSAGE,
 
     // Date and Time color, value and reset
     r += `${COLOR.CYAN}`
-    r += `${d}${t}:`
+    r += `${d}${t}${(d != "" || t != "") ? ":" : ""}`
     r += `${EFFECT.RESET}`
 
     // Tab
@@ -196,5 +196,5 @@ const beLegit = () => {
 
 
 module.exports = {
-    log, level, newLine, EFFECT, COLOR, BACKGROUND, testLines, beLegit
+    log, newLine, testLines, beLegit, LEVEL, EFFECT, COLOR, BACKGROUND
 }
