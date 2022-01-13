@@ -1,11 +1,14 @@
+// Message Levels
 const LEVEL = {
     MESSAGE: "message",
     INFO: 'info',
     NOTICE: 'notice',
     WARNING: 'warning',
     ERROR: 'error'
-};
+}
 
+
+// Message emojis
 const emoji = {}
 emoji[LEVEL.MESSAGE] = "📩";
 emoji[LEVEL.INFO] = "💡";
@@ -13,6 +16,8 @@ emoji[LEVEL.NOTICE] = "📝";
 emoji[LEVEL.WARNING] = "🛑";
 emoji[LEVEL.ERROR] = "😡";
 
+
+// Message Colors
 const COLOR = {
     BLACK: "\x1b[30m",
     RED: "\x1b[31m",
@@ -24,6 +29,8 @@ const COLOR = {
     WHITE: "\x1b[37m"
 }
 
+
+// Message effects
 const EFFECT = {
     RESET: "\x1b[0m",
     BRIGHT: "\x1b[1m",
@@ -32,8 +39,10 @@ const EFFECT = {
     BLINK: "\x1b[5m",
     REVERSE: "\x1b[7m",
     HIDDEN: "\x1b[8m"
-};
+}
 
+
+// Message backgrounds
 const BACKGROUND = {
     BLACK: "\x1b[40m",
     RED: "\x1b[41m",
@@ -43,8 +52,10 @@ const BACKGROUND = {
     MAGENTA: "\x1b[45m",
     CYAN: "\x1b[46m",
     WHITE: "\x1b[47m"
-};
+}
 
+
+// Level colors
 const levelColor = {}
 levelColor[LEVEL.MESSAGE] = COLOR.WHITE
 levelColor[LEVEL.INFO] = COLOR.GREEN
@@ -53,9 +64,9 @@ levelColor[LEVEL.WARNING] = COLOR.YELLOW
 levelColor[LEVEL.ERROR] = COLOR.RED
 
 
+// Log()
 const log = (logMessage = "Legit!", logLevel = LEVEL.MESSAGE, logTime = true, logDate = false, messageColor = null, messageBackground = null, messageEffect = null, prepend="", append="") => {
     let date = new Date();
-   
     let day = ("0" + date.getDate()).slice(-2);
     let month = ("0" + (date.getMonth() + 1)).slice(-2);
     let year = date.getFullYear();
@@ -132,6 +143,8 @@ const log = (logMessage = "Legit!", logLevel = LEVEL.MESSAGE, logTime = true, lo
     console.log(r)
 }
 
+
+// newLine()
 const newLine = (howMany = 1) => {
     for (let i = 0; i < howMany; i++) {
         console.log("")
@@ -139,6 +152,7 @@ const newLine = (howMany = 1) => {
 }
 
 
+// testLine()
 const testLines = () => {
     let phrase = "This is only a test."
     let line = ""
@@ -161,15 +175,17 @@ const testLines = () => {
 
 }
 
+
+// getRandomFromObject
 const getRandomFromObject = (o) => {
     let keys = Object.keys(o)
     let randomKey = keys[Math.floor(Math.random() * keys.length)]
-
     return o[randomKey]
 }
 
+
+// beLegit()
 const beLegit = () => {
-    
     console.log(``)
     console.log(``)
     console.log(``)
@@ -191,10 +207,7 @@ const beLegit = () => {
 }
 
 
-
-
-
-
+// Exports
 module.exports = {
     log, newLine, testLines, beLegit, LEVEL, EFFECT, COLOR, BACKGROUND
 }
